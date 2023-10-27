@@ -9,7 +9,7 @@ import (
 )
 
 func init() {
-	functions.HTTP("UrseLogin", ursePost)
+	functions.HTTP("Urse-signUp", ursePost)
 }
 
 func ursePost(w http.ResponseWriter, r *http.Request) {
@@ -24,6 +24,6 @@ func ursePost(w http.ResponseWriter, r *http.Request) {
 	}
 	// Set CORS headers for the main request.
 	w.Header().Set("Access-Control-Allow-Origin", "https://erfahtech.github.io")
-	fmt.Fprintf(w, beurse.GCFPostHandler("PASETOPRIVATEKEY", "MONGOSTRING", "db_urse", "user", r))
-
+	//insertUser
+	fmt.Fprintf(w, beurse.InsertUser(r))
 }
