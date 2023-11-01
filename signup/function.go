@@ -5,14 +5,14 @@ import (
 	"net/http"
 
 	"github.com/GoogleCloudPlatform/functions-framework-go/functions"
-	beurse "github.com/erfahtech/be_erfahtech"
+	beurse "github.com/erfahtech/be_erfahtech/module"
 )
 
 func init() {
-	functions.HTTP("Urse-signUp", ursePost)
+	functions.HTTP("urse-signup", urseSignup)
 }
 
-func ursePost(w http.ResponseWriter, r *http.Request) {
+func urseSignup(w http.ResponseWriter, r *http.Request) {
 	// Set CORS headers for the preflight request
 	if r.Method == http.MethodOptions {
 		w.Header().Set("Access-Control-Allow-Origin", "https://erfahtech.github.io")
@@ -25,5 +25,5 @@ func ursePost(w http.ResponseWriter, r *http.Request) {
 	// Set CORS headers for the main request.
 	w.Header().Set("Access-Control-Allow-Origin", "https://erfahtech.github.io")
 	//insertUser
-	fmt.Fprintf(w, beurse.InsertUser(r))
+	fmt.Fprintf(w, beurse.GCFHandlerSignup("MONGOSTRING", "db_urse", "user", r))
 }
