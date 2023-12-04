@@ -4,7 +4,7 @@ go 1.21.2
 
 require (
 	github.com/GoogleCloudPlatform/functions-framework-go v1.8.0
-	github.com/erfahtech/be_erfahtech v0.0.14
+	github.com/erfahtech/be_erfahtech v0.0.20
 )
 
 require (
