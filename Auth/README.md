@@ -12,3 +12,9 @@ Welcome to the Google Cloud Function Erfahtech for URSMARTECOSYSTEM.MY.ID!
 
 - Send OTP
   Endpoint send-otp ini adalah titik akses atau URL dalam Aplikasi USE yang digunakan untuk melakukan pengiriman kode otp yang akan digunakan pengguna untuk reset password. Pada kode akan memanggil fungsi GCFHandlerSendOTP pada package beurse yang telah dideploy di Go.pkg.
+
+- Verify OTP
+  Endpoint verify-otp ini adalah titik akses atau URL dalam Aplikasi USE yang digunakan untuk melakukan verifikasi kode otp yang akan dimasukan pengguna untuk reset password. Pada kode akan memanggil fungsi GCFHandlerVerifyOTP pada package beurse yang telah dideploy di Go.pkg.
+
+- Reset Password
+  Endpoint reset-password ini adalah titik akses atau URL dalam Aplikasi USE yang digunakan untuk melakukan pengiriman atau update password baru yang telah dimasukan oleh pengguna. Pada kode akan memanggil fungsi GCFHandlerSendOTP pada package beurse yang telah dideploy di Go.pkg.
